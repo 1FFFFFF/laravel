@@ -80,6 +80,9 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel!@#$%^&*()_+
+                    @if(isset($website))
+                    {{ $website }}
+                    @endif
                 </div>
 
                 <div class="links">
