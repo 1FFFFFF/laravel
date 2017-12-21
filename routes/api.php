@@ -17,10 +17,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
+/*
+* study
+*/
 Route::get('users/{user}', function (App\User $user) {
     dd($user);
 });
-
 
 /*
 * study
