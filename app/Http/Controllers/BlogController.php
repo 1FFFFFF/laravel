@@ -3,16 +3,18 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Models\Blog;
+use App\Http\Models\BlogModel;
+
 class BlogController extends Controller
 {
     public function show($id = 1)
     {
-        $model = new Blog();
-        $result = $model->select();
+        $blogM = new BlogModel();
+        $result = $blogM->select();
         $result = reset($result);
         echo $result->blog;
         echo '<br>';
+        var_dump($blogM->readCountry());
         return 'blog show';
     }
 }

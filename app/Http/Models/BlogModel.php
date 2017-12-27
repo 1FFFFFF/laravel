@@ -5,10 +5,15 @@ namespace App\Http\Models;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
 
-class Blog extends Model
+class BlogModel extends Model
 {
     protected $table = 'blog';
     protected $primaryKey = 'blog_id';
+
+    public function readCountry()//查
+    {
+        return $this->all();
+    }
 
     public function select()
     {
