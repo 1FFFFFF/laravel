@@ -21,7 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 /*
 * study
 */
-Route::get('users/{user}', function (App\User $user) {
+Route::get('user/{user}', function (App\User $user) {
     dd($user);
 });
 
@@ -29,7 +29,7 @@ Route::get('users/{user}', function (App\User $user) {
 * study
 */
 //Route::get('/user', 'UsersController@index');
-
-Route::get('/user',function(){
+Route::get('/user', function () {
     return 'this is api/user';
 });
+

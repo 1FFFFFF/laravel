@@ -24,9 +24,17 @@ Route::get('/', function () {
 });
 
 
+Route::get('/blog/{id?}','BlogController@show')->name('blog');
+
+Route::get('/writeblog',function(){
+    return 'pleace write blog';
+})->name('writeblog');
+
+
 /*
 * study
 */
+
 // ‘/’ or null 都为根目录 api中 ‘/’为‘/’api‘/’ 
 Route::get('/nb',function(){
     return view('welcome',['website'=>'牛逼牛逼']);

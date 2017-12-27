@@ -122,7 +122,9 @@
                         {{ $website }}
                     @endif
                 </div>
-
+                <div class="links">
+                    <a href="{{route('blog')}}">{{route('blog')}}</a>
+                </div>
                 <div class="links">
                     <a href="{{route('nb')}}">{{route('nb')}}</a>
                     <a href="{{route('hello')}}">{{route('hello')}}</a>
