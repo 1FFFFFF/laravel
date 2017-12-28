@@ -24,11 +24,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/blog/{id?}','BlogController@show')->name('blog');
-
-Route::get('/writeblog',function(){
-    return 'pleace write blog';
-})->name('writeblog');
+Route::get('/blog','BlogController@show')->name('blog');
+Route::get('/blog/{id?}','BlogController@showBlog')->name('blog');
+Route::get('/writeblog','BlogController@writeBlog')->name('writeblog');
 
 
 /*
