@@ -15,10 +15,9 @@ class CreateBlogTable extends Migration
     {
         Schema::create('blog', function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->increments('id');
-            $table->integer('blog_id');
-            $table->string('title');
-            $table->string('content');
+            $table->increments('blog_id');
+            $table->string('blog_title');
+            $table->text('blog_content');
             $table->timestamps();
         });
     }
