@@ -17,13 +17,13 @@ class BlogModel extends Model
 
     public function showList()
     {
-        $result = DB::select("select blog_id,title from blog limit 0,50");
+        $result = DB::select("select blog_id,blog_title from blog limit 0,50");
         return $result;
     }
 
     public function showBlogById($blogId = 1)
     {
-        $result = DB::select('select blog_id,title,blog from blog where blog_id = '.$blogId);
+        $result = DB::select('select blog_id,blog_title,blog_content from blog where blog_id = '.$blogId);
         return $result;
     }
 

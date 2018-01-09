@@ -19,8 +19,7 @@ class BlogController extends Controller
             echo $result->title;
             echo '<br>';
         }
-
-        return 'blog show';
+        return view('blog');
     }
 
     public function showBlog($blogId = 1)
