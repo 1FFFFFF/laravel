@@ -6,6 +6,13 @@
  * Time: 23:41
  */
 
+/*
+|--------------------------------------------------------------------------
+| 路由分组+测试
+|--------------------------------------------------------------------------
+| 在这个地方进行laravel的路由联系和测试
+|
+*/
 
 // Route::get($uri, $callback);
 // Route::post($uri, $callback);
@@ -20,7 +27,7 @@
 
 // ‘/’ or null 都为根目录 api中 ‘/’为‘/’api‘/’
 Route::get('/nb',function(){
-    return view('welcome',['website'=>'牛逼牛逼']);
+    return view('index/welcome',['website'=>'牛逼牛逼']);
 })->name('nb');
 
 Route::get('/hello', function () {

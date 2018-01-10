@@ -19,7 +19,7 @@ class BlogController extends Controller
             echo $result->title;
             echo '<br>';
         }
-        return view('blog');
+        return view('blog/blog');
     }
 
     public function showBlog($blogId = 1)
@@ -33,13 +33,7 @@ class BlogController extends Controller
 
     public function writeBlog()
     {
-        echo 'you will write in here';
-        echo '<form action="">
-              <textarea></textarea><br>
-              <textarea>asdas</textarea><br>
-              <input type="button" value="提交">
-              </form>';
-        return 'you will write in here';
+        return view('blog/writeBlog');
     }
 
     public function submitBlog($pass)

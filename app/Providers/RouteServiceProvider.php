@@ -77,7 +77,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapBlogRoutes()
     {
         Route::namespace($this->namespace)
-            ->group(base_path('routes/blog.php'));
+            ->group(base_path('routes/blogRoutes.php'));
     }
 
     protected function mapTestRoutesRoutes()
