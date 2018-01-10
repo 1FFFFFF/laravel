@@ -39,6 +39,9 @@ class RouteServiceProvider extends ServiceProvider
 
         $this->mapWebRoutes();
 
+        $this->mapBlogRoutes();
+
+        $this->mapTestRoutesRoutes();
         //
     }
 
@@ -70,4 +73,18 @@ class RouteServiceProvider extends ServiceProvider
              ->namespace($this->namespace)
              ->group(base_path('routes/api.php'));
     }
+
+    protected function mapBlogRoutes()
+    {
+        Route::namespace($this->namespace)
+            ->group(base_path('routes/blog.php'));
+    }
+
+    protected function mapTestRoutesRoutes()
+    {
+        Route::namespace($this->namespace)
+            ->group(base_path('routes/testRoutes.php'));
+    }
+
+
 }
