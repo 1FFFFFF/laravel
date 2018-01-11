@@ -27,6 +27,14 @@ class BlogController extends Controller
         $results = $blogM->showList();
     }
 
+    public function testAdd()
+    {
+        $bM = new BlogModel();
+        $bM->blog_title = 'test_title';
+        $bM->blog_content = 'test_title';
+        $bM->save();
+    }
+
     public function show()
     {
         $result1 = BlogModel::find(1);

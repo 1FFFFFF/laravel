@@ -6,6 +6,9 @@
  * Time: 12:53
  */
 
+
+
+Route::get('/blogtestadd','BlogController@testAdd')->name('blogadd');
 Route::get('/','BlogController@show')->name('blog');
 Route::get('/blog/{id?}','BlogController@showBlog')->name('blog');
 Route::get('/bloglist','BlogController@blogList')->name('bloglist');
