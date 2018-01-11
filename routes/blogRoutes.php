@@ -8,4 +8,5 @@
 
 Route::get('/','BlogController@show')->name('blog');
 Route::get('/blog/{id?}','BlogController@showBlog')->name('blog');
+Route::get('/bloglist','BlogController@blogList')->name('bloglist');
 Route::get('/writeblog','BlogController@writeBlog')->name('writeblog');

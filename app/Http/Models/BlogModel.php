@@ -7,9 +7,19 @@ use Illuminate\Support\Facades\DB;
 
 class BlogModel extends Model
 {
+    /**
+     * The table associated with the model.
+     *
+     * @var string
+     */
+
     protected $table = 'blog';
     protected $primaryKey = 'blog_id';
 
+
+    /*
+     * 往下所有的都是错误使用，，，，，
+     * */
     public function readCountry()//查
     {
         return $this->all();
@@ -17,7 +27,7 @@ class BlogModel extends Model
 
     public function showList()
     {
-        $result = DB::select("select blog_id,blog_title from blog limit 0,50");
+        $result = DB::select("select blog_id,blog_title,blog_content from blog limit 0,50");
         return $result;
     }
 
@@ -30,7 +40,7 @@ class BlogModel extends Model
     public function firstInsert()
     {
         if(!$result = DB::select("select * from blog")){
-            $result = DB::insert("insert into `blog` (`ver`,`estate`,`blog`) values(?,?,?)",[1,0,'first blog sql']);
+            $result = DB::insert("insert into `blog` (`blog_title`,`blog_content`) values(?,?)",['first_blog','first blog sql']);
             return $result;
         } else {
             return true;

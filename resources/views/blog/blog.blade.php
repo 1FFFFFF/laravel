@@ -3,7 +3,6 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <title>Welcome home</title>
     <script type="text/javascript" src="{{asset('js/vue/vue.js')}}"></script>
     <!-- Fonts -->
@@ -83,7 +82,6 @@
         .title {
             font-size: 84px;
         }
-
         .links > a {
             color: #636b6f;
             padding: 0 25px;
@@ -93,7 +91,6 @@
             text-decoration: none;
             text-transform: uppercase;
         }
-
         .m-b-md {
             margin-bottom: 30px;
         }
@@ -104,6 +101,11 @@
     <div class="content">
         <div class="title">
             <p>@{{ message }}</p>
+            <p>一定要找一个比较好的前后端分离方式，</p>
+            <p>laravel mc</p>
+            <p>laravel controller 的基类方法（黑人问好）</p>
+            <p>laravel 的事务</p>
+
         </div>
     </div>
 </div>
