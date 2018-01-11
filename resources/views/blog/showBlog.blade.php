@@ -8,5 +8,11 @@
 </head>
 <body>
     <div>building</div>
+    <div>
+        {{$blog->blog_title}}
+    </div>
+    <div>
+        {{$blog->blog_content}}
+    </div>
 </body>
 </html>

@@ -3,7 +3,7 @@
 namespace App\Http\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Support\Facades\DB;
+#use Illuminate\Support\Facades\DB;
 
 class BlogModel extends Model
 {
@@ -17,10 +17,11 @@ class BlogModel extends Model
     protected $primaryKey = 'blog_id';
 
 
+
     /*
      * 往下所有的都是错误使用，，，，，
      * */
-    public function readCountry()//查
+    /*public function readCountry()//查
     {
         return $this->all();
     }
@@ -45,5 +46,5 @@ class BlogModel extends Model
         } else {
             return true;
         }
-    }
+    }*/
 }

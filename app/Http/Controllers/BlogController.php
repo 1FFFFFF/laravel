@@ -64,16 +64,23 @@ class BlogController extends Controller
 
     public function blogList()
     {
-        return view('blog.blogList');
+        $blogList = BlogModel::all();
+        var_dump($blogList[1]);
+        return view('blog.blogList',['blogList'=>$blogList]);
     }
 
     public function showBlog($blogId = 1)
     {
-        $blogM = new BlogModel();
-        $result = $blogM->showBlogById($blogId);
-        $result = reset($result);
-        echo $result->blog;
-        return view('blog.showBlog');
+        /*$blog = BlogModel::where('blog_id',$blogId)->get();
+        if(!$blog){
+            redirect()->route('blog');
+        }
+        $blog = reset($blog)[0];*/
+        $blog = BlogModel::find($blogId);
+        if(!$blog){
+            return redirect()->route('blogshow');
+        }
+        return view('blog.showBlog',['blog'=>$blog]);
     }
 
     public function writeBlog()

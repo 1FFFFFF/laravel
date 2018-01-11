@@ -123,29 +123,7 @@
                     @endif
                 </div>
                 <div class="links">
-                    <a href="{{route('blog')}}">{{route('blog')}}</a>
-                </div>
-                <div class="links">
-                    <a href="{{route('nb')}}">{{route('nb')}}</a>
-                    <a href="{{route('hello')}}">{{route('hello')}}</a>
-                    <a href="{{route('foo')}}">{{route('foo')}}</a>
-                    <a href="{{route('fool')}}">{{route('fool')}}</a>
-                    <a href="{{route('foolpost')}}">{{route('foolpost')}}</a>
-                    <a href="{{route('bar')}}">{{route('bar')}}</a>
-                    <a href="{{route('there')}}">{{route('there')}}</a>
-                    <a href="{{route('here')}}">{{route('here')}}</a>
-
-                    <a href="{{route('user2')}}">{{route('user2')}}</a>
-                    <a href="{{route('user2')}}">{{route('user2')}}</a>
-                    <a href="{{route('user3')}}">{{route('user3')}}</a>
-                    <a href="{{route('user4')}}">{{route('user4')}}</a>
-                    <a href="{{route('user5')}}">{{route('user5')}}</a>
-                    <a href="{{route('user6')}}">{{route('user6')}}</a>
-
-                    <a href="#">路由分组</a>
-                    <a href="#">子域名路由</a>
-
-                    <a href="{{route('adminuser')}}">{{route('adminuser')}}</a>
+                    <a href="{{route('blogshow')}}">{{route('blogshow')}}</a>
                 </div>
             </div>
         </div>

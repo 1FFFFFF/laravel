@@ -65,11 +65,11 @@
 <body leftmargin="60px" topmargin="50px">
 <div dir="ltr" lang="zh-CN">
     <div class="header">在重置电脑时删除了应用</div>
-    <table width="730px" border="1px" frame="void" rules="groups">
+    <table width="930px" border="1px" frame="void" rules="groups">
         <tr class="Header">
-            <td width="60%" height="30px" valign="top">应用名称</td>
+            <td width="40%" height="30px" valign="top">应用名称</td>
             <td width="30%" height="30px" valign="top">发布者</td>
-            <td width="10%" height="30px" valign="top">版本</td>
+            <td width="20%" height="30px" valign="top">版本</td>
         </tr>
         <tbody>
         <tr>
@@ -90,6 +90,13 @@
             <td class="Secondary">网易公司</td>
             <td class="Secondary">2.2.3.195673</td>
         </tr>
+        @foreach ($blogList as $blog)
+            <tr>
+                <td class="Regular"><a href="{{route('blog')}}/{{$blog->blog_id}}">{{$blog->blog_title}}</a></td>
+                <td class="Secondary">{{$blog->blog_content}}</td>
+                <td class="Secondary">{{$blog->created_at}}</td>
+            </tr>
+        @endforeach
         </tbody>
     </table>
     <div class="Copyright">{{date('Y-m-d H:i:s',time())}}</div>
