@@ -111,6 +111,9 @@
 </div>
 </body>
 <script type="text/javascript">
+    var data = JSON.parse(@json($data));
+    console.log(data);
+
     new Vue({
         el: '.title',
         data: {

@@ -59,7 +59,12 @@ class BlogController extends Controller
             echo $result->blog_content;
             echo '<br>';
         }
-        return view('blog.blog');
+        $result = [
+            'blogId'=>$result1->blog_id,
+            'blogTitle'=>$result->blog_title,
+        ];
+        $result = json_encode($result);
+        return view('blog.blog',['data'=>$result]);
     }
 
     public function blogList()
