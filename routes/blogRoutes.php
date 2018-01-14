@@ -6,6 +6,11 @@
  * Time: 12:53
  */
 
+
+// 邮件测试
+
+Route::get('/mail/send','MailController@send');
+
 // 博客首页
 Route::get('/blogshow','BlogController@show')
     ->name('blogshow');
