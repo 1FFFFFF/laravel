@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: hzj
- * Date: 2018/1/10
- * Time: 12:53
- */
-
 
 // 邮件测试
 
