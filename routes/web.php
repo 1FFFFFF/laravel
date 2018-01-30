@@ -12,7 +12,14 @@
 */
 
 
+//Route::get('/', function () {
+//    return view('index.index');
+//});
+
+
 Route::get('/', function () {
-    return view('index.index');
+    return redirect('/blog');
 });
 
+Route::get('blog', 'Show\\BlogControllerV2@index');
+Route::get('blog/{slug}', 'Show\\BlogControllerV2@showPost');
