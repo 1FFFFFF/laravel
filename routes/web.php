@@ -22,5 +22,7 @@ Route::get('/', function () {
     return redirect('/blog');
 });
 
-Route::get('blog', 'Show\\BlogControllerV2@index');
-Route::get('blog/{slug}', 'Show\\BlogControllerV2@showPost');
+Route::namespace('Blog')->group(function(){
+    Route::get('blog', 'BlogController@index');
+    Route::get('blog/{slug}', 'BlogController@showPost');
+});

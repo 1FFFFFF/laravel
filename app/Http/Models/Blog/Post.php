@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Models\BlogV2;
+namespace App\Http\Models\Blog;
 
 use Illuminate\Database\Eloquent\Model;
 

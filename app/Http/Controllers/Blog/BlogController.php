@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers\Show;
+namespace App\Http\Controllers\Blog;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Http\Models\BlogV2\Post;
+use App\Http\Models\Blog\Post;
 use Carbon\Carbon;
 
-class BlogControllerV2 extends Controller
+class BlogController extends Controller
 {
-    // php artisan make:controller BlogControllerV2
+    // php artisan make:controller BlogController
 
     public function index()
     {
