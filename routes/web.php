@@ -26,3 +26,7 @@ Route::namespace('Blog')->group(function(){
     Route::get('blog', 'BlogController@index');
     Route::get('blog/{slug}', 'BlogController@showPost');
 });
+
+
+// 邮件测试
+Route::get('/mail/send','MailController@send');
