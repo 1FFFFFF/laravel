@@ -17,6 +17,7 @@
 //});
 
 
+// Blog pages
 Route::get('/', function () {
     return redirect('/blog');
 });

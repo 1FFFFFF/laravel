@@ -13,23 +13,23 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
 
 
 /*
 * study
 */
-Route::get('user/{user}', function (App\User $user) {
-    dd($user);
-});
+//Route::get('user/{user}', function (App\User $user) {
+//    dd($user);
+//});
 
 /*
 * study
 */
 //Route::get('/user', 'UsersController@index');
-Route::get('/user', function () {
-    return 'this is api/user';
-});
+//Route::get('/user', function () {
+//    return 'this is api/user';
+//});
 
