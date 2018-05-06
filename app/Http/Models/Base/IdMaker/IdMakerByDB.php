@@ -33,6 +33,7 @@ class IDMakerByDB implements IDMaker
 
     /**
      * @return int
+     * @throws AuthorizationException
      */
     public function getNextId()
     {
@@ -48,6 +49,7 @@ class IDMakerByDB implements IDMaker
     }
 
     /**
+     * id 目前最大不得超过 天数*10000,
      * @return int
      * @throws AuthorizationException
      */
@@ -65,10 +67,10 @@ class IDMakerByDB implements IDMaker
 
         $rows = DB::select($querySQL);
 
-        $todayMaxId = (int)((time() - strtotime('2018-05-05')) / 3600 / 24 * 1000);
+        $todayMaxId = (int)((time() - strtotime('2018-05-05')) / 3600 / 24 * 10000);
 
         if ($rows[0]->nextid >= $todayMaxId)
-            throw new AuthorizationException('您不是该文章的作者，不能修改');
+            throw new AuthorizationException();
 
         DB::update($updateSQL);
         //DB::statement($unLockSQL);
