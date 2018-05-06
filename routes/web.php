@@ -35,5 +35,5 @@ Route::namespace('Blog')->group(function(){
 // 邮件测试
 Route::get('/mail/send','MailController@send');
 // 中间件测试
-Route::get('{age}',function(){
-})->middleware('CheckAge');
+//Route::get('{age}',function(){
+//})->middleware('CheckAge');
