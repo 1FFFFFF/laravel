@@ -21,7 +21,7 @@ use Illuminate\Http\Request;
 /*
 * study
 */
-//Route::get('user/{user}', function (App\User $user) {
+//Route::get('user/{user}', function (App\Models\User $user) {
 //    dd($user);
 //});
 
