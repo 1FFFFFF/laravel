@@ -8,6 +8,9 @@ use App\Http\Models\Base\IdMaker\IDMakerByDB;
 
 class NextDbController extends Controller
 {
+    /**
+     * @throws \Illuminate\Auth\Access\AuthorizationException
+     */
     public function getId()
     {
         $id = IDMakerByDB::instance()->getNextId();
