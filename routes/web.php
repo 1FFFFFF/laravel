@@ -16,15 +16,16 @@
 //    return view('index.index');
 //});
 
+Route::get('/', 'PagesController@root')->name('root');
 
 Route::namespace('Test')->group(function(){
     Route::get('/idtest','NextDbController@getId');
 });
 
 // Blog pages
-Route::get('/', function () {
-    return redirect('/blog');
-});
+//Route::get('/', function () {
+//    return redirect('/blog');
+//});
 
 Route::namespace('Blog')->group(function(){
     Route::get('blog', 'BlogController@index');
