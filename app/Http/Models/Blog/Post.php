@@ -16,4 +16,14 @@ class Post extends Model
             $this->attributes['slug'] = str_slug($value);
         }
     }
+
+    /**
+     * Get the route key for the model.
+     *
+     * @return string
+     */
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

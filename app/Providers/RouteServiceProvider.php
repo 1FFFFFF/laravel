@@ -23,7 +23,7 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // route中的id参数只能是正则[0-9]
         //Route::pattern('id', '[0-9]+');
         parent::boot();
     }

@@ -17,6 +17,10 @@
 //});
 
 
+Route::namespace('Test')->group(function(){
+    Route::get('/idtest','NextDbController@getId');
+});
+
 // Blog pages
 Route::get('/', function () {
     return redirect('/blog');
@@ -30,3 +34,6 @@ Route::namespace('Blog')->group(function(){
 
 // 邮件测试
 Route::get('/mail/send','MailController@send');
+// 中间件测试
+Route::get('{age}',function(){
+})->middleware('CheckAge');
