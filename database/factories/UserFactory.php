@@ -1,6 +1,7 @@
 <?php
 
 use Faker\Generator as Faker;
+use Carbon\Carbon;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,20 +16,16 @@ use Faker\Generator as Faker;
 
 $factory->define(App\Models\User::class, function (Faker $faker) {
     static $password;
+    $now = Carbon::now()->toDateTimeString();
 
     return [
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
-        'password' => $password ?: $password = bcrypt('secret'),
+        'password' => $password ?: $password = bcrypt('password'),
         'remember_token' => str_random(10),
+        'introduction' => $faker->sentence(),
+        'created_at' => $now,
+        'updated_at' => $now,
     ];
 });
 
-
-$factory->define(App\Http\Models\BlogV2\Post::class, function ($faker) {
-    return [
-        'title' => $faker->sentence(mt_rand(3, 10)),
-        'content' => join("\n\n", $faker->paragraphs(mt_rand(3, 6))),
-        'published_at' => $faker->dateTimeBetween('-1 month', '+3 days'),
-    ];
-});
