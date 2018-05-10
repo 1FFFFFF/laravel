@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '话题列表')
+@section('title', '忽忽哈嘿')
 
 @section('content')
 
