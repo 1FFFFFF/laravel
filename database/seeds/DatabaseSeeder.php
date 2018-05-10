@@ -13,5 +13,6 @@ class DatabaseSeeder extends Seeder
     {
         //默认是注释的 2017 12 8 打开 注释
         $this->call(UsersTableSeeder::class);
+		$this->call(TopicsTableSeeder::class);
     }
 }
