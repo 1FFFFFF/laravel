@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
         User::observe(UserObserver::class);
         //Reply::observe(ReplyObserver::class);
         Topic::observe(TopicObserver::class);
-        Reply::observe(ReplyObserver::class)
+        Reply::observe(ReplyObserver::class);
     }
 
     /**
