@@ -50,4 +50,9 @@ class User extends Authenticatable
 //    {
 //        return 'name';
 //    }
+
+    public function replies()
+    {
+        return $this->hasMany(Reply::class);
+    }
 }
