@@ -17,7 +17,10 @@
 //    return view('index.index');
 //});
 
-Route::get('/', 'PagesController@root')->name('root');
+//Route::get('/', 'PagesController@root')->name('root');
+
+Route::get('/', 'TopicsController@index')->name('root');
+
 
 Route::namespace('Test')->group(function(){
     Route::get('/idtest','NextDbController@getId');
