@@ -31,8 +31,32 @@ php artisan route:cache
 
 
 
+```.env
+
+APP_ENV=production
+APP_DEBUG=false
+APP_KEY=base64:6ouIfKdFXfaIGZrH9qBCKAWupg4kVwuRsRGpeQnCRh4=
+
+# 路由缓存
+php artisan route:cache
+# 配置缓存
+#php artisan config:cache
+# 上面又是会导致composer 无法优化
+#rm bootstrap/cache/config.php
+# composer 
+composer dump-autoload --optimize
+# 命令优化
+php artisan optimize
+
+# 暂未加入清除缓存，故暂不添加此条途径
+# opcacahe 
+```
 
 
+
+
+
+```
 
 php artisan key:generate
 
@@ -66,3 +90,4 @@ php artisan f:sync-user-actived-at
 # php artisan make:middleware RecordLastActivedTime
 # 生成命令
 # php artisan make:command SyncUserActivedAt --command=f:sync-user-actived-at
+```
