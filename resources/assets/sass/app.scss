@@ -2,13 +2,14 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 // Variables
 @import "variables";
+
 // Bootstrap
 @import "~bootstrap-sass/assets/stylesheets/bootstrap";
 
 /* universal */
 
 body {
-  font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial, sans-serif;
+  font-family: Hiragino Sans GB, "Hiragino Sans GB", Helvetica, "Microsoft YaHei", Arial,sans-serif;
 }
 
 /* header */
@@ -20,18 +21,6 @@ body {
   border-top: 4px solid #00b5ad;
   margin-bottom: 40px;
   margin-top: 0px;
-  .dropdown-menu {
-    padding: 0px;
-
-    li a {
-      border-bottom: 1px solid #d8d8d8;
-      line-height: 2.4;
-
-      .glyphicon {
-        margin-right: 8px;
-      }
-    }
-  }
 }
 
 /* Sticky footer styles */
@@ -195,5 +184,28 @@ body {
 
   .badge-hint {
     background-color: #d15b47 !important;;
+  }
+}
+
+
+
+/* Sidebar */
+
+.sidebar {
+  .panel-body {
+    padding: 12px;
+  }
+
+  hr {
+    margin-top: 8px;
+    margin-bottom: 10px;
+  }
+
+  .active-users {
+    a.media {
+      color: #797878;
+      line-height: 26px;
+      font-size: 0.9em;
+    }
   }
 }
