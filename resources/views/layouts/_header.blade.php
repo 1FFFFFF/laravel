@@ -12,7 +12,7 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                忽忽哈嘿
+                UNKNOW
             </a>
         </div>
 

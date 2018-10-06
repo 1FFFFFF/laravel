@@ -2,7 +2,7 @@
 
 @section('title', isset($category) ? $category->name : '话题列表')
 
-@section('title', '忽忽哈嘿')
+@section('title', 'UNKNOW')
 
 @section('content')
 
