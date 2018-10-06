@@ -8,6 +8,7 @@
 ```shell
 
 systemctl start docker
+docker-compose up -d nginx mysql redis workspace
 docker-compose up -d nginx mysql phpmyadmin redis workspace 
  
  
