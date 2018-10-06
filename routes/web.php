@@ -13,40 +13,15 @@
 
 //npm run watch-poll
 
-//Route::get('/', function () {
-//    return view('index.index');
-//});
-
-//Route::get('/', 'PagesController@root')->name('root');
-
 Route::get('/', 'TopicsController@index')->name('root');
 
 
-Route::namespace('Test')->group(function(){
-    Route::get('/idtest','NextDbController@getId');
-});
-
-// Blog pages
-//Route::get('/', function () {
-//    return redirect('/blog');
+//Route::namespace('Test')->group(function(){
+//    Route::get('/idtest','NextDbController@getId');
 //});
-
-Route::namespace('Blog')->group(function(){
-    Route::get('blog', 'BlogController@index');
-    Route::get('blog/{slug}', 'BlogController@showPost');
-});
-
 
 // 邮件测试
 Route::get('/mail/send','MailController@send');
-// 中间件测试
-//Route::get('{age}',function(){
-//})->middleware('CheckAge');
-
-//Auth::routes();
-
-//Route::get('/home', 'HomeController@index')->name('home');
-
 
 // Authentication Routes...
 Route::get('login', 'Auth\LoginController@showLoginForm')->name('login');

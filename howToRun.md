@@ -1,4 +1,33 @@
 
+# laradock  
+
+## [我的]默认配置加swoole  
+
+## 关于容器的一些常用命令
+
+```shell
+
+systemctl start docker
+docker-compose up -d nginx mysql phpmyadmin redis workspace 
+ 
+ 
+查看容器日志
+docker logs -f -t --tail 100 2eddebdc1d9d
+docker logs -f -t --tail *行数 *容器id
+
+docker-compose logs -f nginx
+docker-compose exec mysql bash
+docker-compose exec nginx bash
+
+composer config repo.packagist composer https://packagist.org
+
+```
+
+
+
+
+
+
 # 开发所需
 # npm run watch-poll
 # vagrant provision && vagrant reload
@@ -11,7 +40,8 @@ php artisan route:cache
 php artisan migrate
 #php artisan db:seed 测试数据可以不执行
 #php artisan f:calculate-active-user 同上
-php artisan  horizon #需开启守护进程
+# php artisan  horizon #需开启守护进程  有点问题用下面一句原生代替
+php artisan queue:listen
 export EDITOR=vim && crontab -e
 # 添加定时任务
 # * * * * * php /home/vagrant/Code/larabbs/artisan schedule:run >> /dev/null 2>&1
@@ -30,6 +60,7 @@ php artisan route:cache
 ```
 
 
+# 优化手段
 
 ```.env
 
@@ -54,7 +85,7 @@ php artisan optimize
 
 
 
-
+# other
 
 ```
 

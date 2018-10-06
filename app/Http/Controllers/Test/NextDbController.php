@@ -14,6 +14,5 @@ class NextDbController extends Controller
     public function getId()
     {
         $id = IDMakerByDB::instance()->getNextId();
-        var_dump($id);
     }
 }
