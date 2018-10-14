@@ -12,7 +12,9 @@
 */
 
 //npm run watch-poll
-
+if (!class_exists('Route')) {
+    class_alias(\Illuminate\Support\Facades\Route::class, 'Route');
+}
 Route::get('/', 'TopicsController@index')->name('root');
 
 
